@@ -11,6 +11,23 @@
 <head>
     <%@ include file="/page/common/common.jsp" %>
     <title></title>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type:'POST',
+                url:'${_base}/container/all',
+                dataType:'json',
+                success:function(data){
+                    var containerTmpl = $.templates("#containerTmpl");
+                    var containers = data;
+                    var container = {
+                        containers: containers
+                    };
+                    var html = containerTmpl.link("#containers", container);
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -32,16 +49,28 @@
             <table class="table table-hover">
                 <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>Names</th>
                     <th>Description</th>
                     <th>Image</th>
                     <th>Command</th>
-                    <th>Host</th>
+                    <th>Create time</th>
                     <th>Action</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody id="containers">
                 </tbody>
+                <script id="containerTmpl" type="text/x-jsrender">
+                    {^{for containers}}
+                        <tr>
+                            <td>{{:Names}}</td>
+                            <td></td>
+                            <td>{{:Image}}</td>
+                            <td>{{:Command}}</td>
+                            <td>{{:Created}}</td>
+                            <td></td>
+                        </tr>
+                    {{/for}}
+                </script>
             </table>
         </div>
     </div>

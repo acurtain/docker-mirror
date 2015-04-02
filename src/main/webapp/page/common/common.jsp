@@ -6,8 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%
     String _base = request.getContextPath();
     request.setAttribute("_base", _base);
@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="${_base}/resources/Bootstrap/css/bootstrap.min.css">
 <script src="${_base}/resources/jQuery/jquery.min.js"></script>
 <script src="${_base}/resources/Bootstrap/js/bootstrap.min.js"></script>
+<script src="${_base}/resources/common/jsviews.min.js"></script>
 
 <script>
     var _base = "${_base}";
