@@ -1,0 +1,8 @@
+.idea/libraries/Gradle__org_apache_httpcomponents_httpclient_4_4.xml
+.idea/vcs.xml
+.gradle/2.2/taskArtifacts/cache.properties
+.idea/.name
+build/classes/artifacts/docker-mirror/docker-mirror-1.0.war
+build/resources/main/log4j.properties
+build/tmp/war/MANIFEST.MF
+docker-mirror.iml
